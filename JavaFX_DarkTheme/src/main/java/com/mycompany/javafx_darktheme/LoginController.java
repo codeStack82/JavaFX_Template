@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
@@ -32,10 +33,10 @@ public class LoginController implements Initializable {
     private Label lbl_err_pwd;
     
     @FXML 
-    private Label lbl_forgotpwd;
+    private Hyperlink lnk_forgotPwd;
     
     @FXML 
-    private Label lbl_signup;
+    private Hyperlink lnk_signup;
 
     // Formatting Effects
     DropShadow dropShadowEnter  = new DropShadow();
@@ -56,9 +57,7 @@ public class LoginController implements Initializable {
         
         // Login btn
         btn_login.setOnMouseEntered((MouseEvent e) -> btn_login.setEffect(dropShadowEnter));
-        btn_login.setOnMouseExited((MouseEvent e) -> btn_login.setEffect(dropShadowExit));
-        
-         
+        btn_login.setOnMouseExited((MouseEvent e) -> btn_login.setEffect(dropShadowExit));   
     }    
     
     
@@ -76,12 +75,19 @@ public class LoginController implements Initializable {
         return isValidUser;
     } 
     
-    //TODO: test not working
-    @FXML private void forgotLblClicked(MouseEvent event){
-        boolean isValidUser = false;
-        
+    @FXML private void forgotLinkClicked(MouseEvent event){
 
-        System.out.println("Forgot pwd clicked");
+        System.out.println("Forgot password link clicked");
+        
+        //TODO: Code forgot password process here...
+
+    } 
+    
+    @FXML private void signUpLinkClicked(MouseEvent event){
+
+        System.out.println("Sign Up link clicked");
+        
+        //TODO: Code sign up new user process here...
 
     } 
 }
