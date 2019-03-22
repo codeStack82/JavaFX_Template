@@ -40,11 +40,10 @@ public class LoginController implements Initializable {
     // Formatting Effects
     DropShadow dropShadowEnter  = new DropShadow();
     DropShadow dropShadowExit   = new DropShadow();
-  
-   
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Effects
+        //DS Effects
         dropShadowEnter.setRadius(5.0);
         dropShadowEnter.setOffsetX(3.0);
         dropShadowEnter.setOffsetY(3.0);
@@ -58,6 +57,7 @@ public class LoginController implements Initializable {
         // Login btn
         btn_login.setOnMouseEntered((MouseEvent e) -> btn_login.setEffect(dropShadowEnter));
         btn_login.setOnMouseExited((MouseEvent e) -> btn_login.setEffect(dropShadowExit));
+        
          
     }    
     
